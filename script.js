@@ -1,4 +1,5 @@
 const startButton = document.getElementById('start-btn')
+const introText = document.getElementById('intro')
 const nextButton = document.getElementById('next-btn')
 const questionContainerElement = document.getElementById('question-container')
 const questionElement = document.getElementById('question')
@@ -14,6 +15,7 @@ nextButton.addEventListener('click', () => {
 
 function startGame() {
   startButton.classList.add('hide')
+  introText.classList.add('hide')
   shuffledQuestions = questions.sort(() => Math.random() - .5)
   currentQuestionIndex = 0
   questionContainerElement.classList.remove('hide')
@@ -78,35 +80,35 @@ function clearStatusClass(element) {
 
 const questions = [
   {
-    question: 'What is 2 + 2?',
+    question: 'You have 13 puppies. All but 8 died. How many do you have left?',
     answers: [
-      { text: '4', correct: true },
-      { text: '22', correct: false }
+      { text: '8', correct: true },
+      { text: '13', correct: false }
     ]
   },
   {
-    question: 'Who is the best YouTuber?',
+    question: 'What is the 18th letter in the english alphabet?',
     answers: [
-      { text: 'Web Dev Simplified', correct: true },
-      { text: 'Traversy Media', correct: true },
-      { text: 'Dev Ed', correct: true },
-      { text: 'Fun Fun Function', correct: true }
+      { text: 'R', correct: true },
+      { text: 'S', correct: false },
+      { text: 'T', correct: false },
+      { text: 'Q', correct: false }
     ]
   },
   {
-    question: 'Is web development fun?',
+    question: '8 x (1 + 2) - 0 ',
     answers: [
-      { text: 'Kinda', correct: false },
-      { text: 'YES!!!', correct: true },
-      { text: 'Um no', correct: false },
-      { text: 'IDK', correct: false }
+      { text: '24', correct: false },
+      { text: '4!', correct: true },
+      { text: '10', correct: false },
+      { text: '25', correct: false }
     ]
   },
   {
-    question: 'What is 4 * 2?',
+    question: 'How many stars on the American Flag?',
     answers: [
-      { text: '6', correct: false },
-      { text: '8', correct: true }
+      { text: '51', correct: false },
+      { text: '50', correct: true }
     ]
   }
 ]
